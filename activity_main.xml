@@ -12,156 +12,148 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_11"
+            android:id="@+id/button_standard"
             android:layout_width="0dp"
             android:layout_weight="5"
             android:layout_height="wrap_content"
-            android:text="Button 11" />
+            android:text="标准"
+            android:onClick="Button_standard_onClick" />
 
         <Button
-            android:id="@+id/button_12"
+            android:id="@+id/button_model2"
             android:layout_width="0dp"
             android:layout_weight="5"
             android:layout_height="wrap_content"
-            android:text="Button 12" />
+            android:text="模式2"
+            android:onClick="Button_model2_onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_standard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerKind1">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCamp1">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCountry1">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerKind2">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCamp2">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCountry2">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerKind3">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCamp3">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCountry3">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerKind4">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCamp4">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_playerCountry4">
+            </Spinner>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_1"
+            android:id="@+id/button_start"
             android:layout_width="0dp"
-            android:layout_weight="3"
+            android:layout_weight="10"
             android:layout_height="wrap_content"
-            android:text="Button 1" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <Button
-            android:id="@+id/button_2"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:text="Button 2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerKind1">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCamp1">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCountry1">
-        </Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerKind2">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCamp2">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCountry2">
-        </Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerKind3">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCamp3">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCountry3">
-        </Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerKind4">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCamp4">
-        </Spinner>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:id="@+id/playerCountry4">
-        </Spinner>
-
+            android:text="开始"
+            android:onClick="Button_start_onClick" />
     </LinearLayout>
 </LinearLayout>

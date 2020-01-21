@@ -1,17 +1,15 @@
-package com.example.myfirstapplication;
+package com.example.myapplication;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
-import android.view.SurfaceHolder;
 
 public class SceneSurfaceView extends SurfaceView {
 
@@ -30,6 +28,15 @@ public class SceneSurfaceView extends SurfaceView {
     // 地图位移最大值
     int mapShiftMaxX = 100;
     int mapShiftMaxY = 100;
+
+    // 区分点击与拖动事件
+    private boolean isClick;
+    // 拖动起始位置
+    int downX = 0;
+    int downY = 0;
+    // 拖动起始结束时间
+    private long startTime = 0;
+    private long endTime = 0;
 
     // 声明图片
     Bitmap bitmap_land;
@@ -70,31 +77,49 @@ public class SceneSurfaceView extends SurfaceView {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        int downX = 0;
-        int downY = 0;
-        int moveX = 0;
-        int moveY = 0;
+
 
         switch(event.getAction()){
 
             case MotionEvent.ACTION_DOWN:
-                downX = (int) event.getX();
-                downY = (int) event.getY();
+                downX = (int) event.getRawX();
+                downY = (int) event.getRawY();
+
+                // 当按下的时候设置isClick为false
+                isClick = false;
+                startTime = System.currentTimeMillis();
+
+                break;
             case MotionEvent.ACTION_MOVE:
-                moveX = (int) event.getX();
-                moveY = (int) event.getY();
-                mapShiftX = mapShiftX + (moveX - downX);
-                mapShiftY = mapShiftY + (moveY - downY);
-                onDraw_Main();
+
+                //当按钮被移动的时候设置isClick为true
+                isClick = true;
+
+                int moveX = (int) event.getRawX() - downX;
+                int moveY = (int) event.getRawY() - downY;
+
+                mapShiftX = mapShiftX + moveX;
+                mapShiftY = mapShiftY + moveY;
+
+                downX = (int) event.getRawX();
+                downY = (int) event.getRawY();
+
+                break;
+            case MotionEvent.ACTION_UP:
+                endTime = System.currentTimeMillis();
+                // 当从点击到弹起小于半秒的时候,则判断为点击,如果超过则不响应点击事件
+                if ((endTime - startTime) > 0.1 * 1000L) {
+                    isClick = true;
+                } else {
+                    isClick = false;
+                }
+                break;
         }
 
-//        int ax = (int) event.getX();
-//        int ay = (int) event.getY();
-//        // 判断触摸点
-//        if(){
-//
-//        }
+        // 重新绘制画面
+        invalidate();
 
-        return super.onTouchEvent(event);
+        // 不能用return super.onTouchEvent(event);
+        return true;
     }
 }

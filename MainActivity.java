@@ -1,9 +1,10 @@
-package com.example.myfirstapplication;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -253,6 +254,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SceneActivity.class);
         startActivity(intent);
     }
-
 }
-

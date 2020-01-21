@@ -1,9 +1,9 @@
-package com.example.myapplication;
+package com.example.myfirstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -246,4 +246,13 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layoutStandard = (LinearLayout)findViewById(R.id.layout_standard);
         layoutStandard.setVisibility(View.INVISIBLE);
     }
+
+    // [开始]按钮事件
+    public void Button_start_onClick(View view){
+        // 画面跳转
+        Intent intent = new Intent(this, SceneActivity.class);
+        startActivity(intent);
+    }
+
 }
+
